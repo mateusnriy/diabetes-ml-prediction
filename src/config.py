@@ -22,6 +22,8 @@ DATA_FILE = DATA_DIR / "diabetes.csv"
 TARGET_COL = "Outcome"
 FEATURE_COLS = ["Glucose", "BMI", "Insulin", "Pregnancies", "Age"]
 ZERO_COLS = ["Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI"]
+CONTINUOUS_COLS = ["Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI",
+                   "DiabetesPedigreeFunction", "Age"]
 
 # ── Pré-processamento ────────────────────────────────────
 IQR_FACTOR = 1.5

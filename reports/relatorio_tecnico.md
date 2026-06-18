@@ -3,7 +3,7 @@
 ## Reprodução Parcial de Khanam & Foo (2021)
 
 **Disciplina:** Inteligência Artificial  
-**Grupo:** Mateus Neri, Integrante 2, Integrante 3  
+**Grupo:** Juliana Assis, Flávio de Aguiar e Mateus Neri
 **Data de entrega:** 19/06/2026  
 **Repositório:** https://github.com/mateusnriy/diabetes-ml-prediction
 

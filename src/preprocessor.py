@@ -58,29 +58,50 @@ def impute_with_median(df: pd.DataFrame) -> pd.DataFrame:
     return df_copy
 
 
-def remove_outliers_iqr(df: pd.DataFrame, factor: float = 1.5) -> pd.DataFrame:
+def remove_outliers_iqr(
+    df: pd.DataFrame,
+    factor: float = 1.5,
+    cols: list[str] | None = None,
+) -> pd.DataFrame:
     """
-    Remove outliers de todas as colunas usando o método Interquartile Range (IQR).
+    Remove outliers usando o método Interquartile Range (IQR).
+
+    O cálculo é restrito às colunas contínuas informadas em `cols`.
+    Colunas binárias (ex: Outcome) e discretas (ex: Pregnancies)
+    não são consideradas, pois a aplicação do IQR nessas variáveis
+    distorce a distribuição dos dados e elimina registros válidos.
 
     Parâmetros:
         df (pd.DataFrame): DataFrame após imputação de nulos
         factor (float): multiplicador do IQR para limites superior/inferior (padrão: 1.5)
+        cols (list[str] | None): colunas contínuas para aplicar o IQR.
+            Se None, utiliza CONTINUOUS_COLS definida em config.py.
 
     Retorna:
         pd.DataFrame: DataFrame com outliers removidos
     """
-    q1 = df.quantile(0.25)
-    q3 = df.quantile(0.75)
+    if cols is None:
+        from src.config import CONTINUOUS_COLS
+        cols = CONTINUOUS_COLS
+
+    # Filtra apenas as colunas contínuas presentes no DataFrame
+    cols_validas = [c for c in cols if c in df.columns]
+
+    df_continuo = df[cols_validas]
+
+    q1 = df_continuo.quantile(0.25)
+    q3 = df_continuo.quantile(0.75)
     iqr = q3 - q1
 
     lower_bound = q1 - factor * iqr
     upper_bound = q3 + factor * iqr
 
-    # Filtra linhas onde nenhuma coluna é outlier
-    mask = ~((df < lower_bound) | (df > upper_bound)).any(axis=1)
+    # Filtra linhas onde nenhuma coluna contínua é outlier
+    mask = ~((df_continuo < lower_bound) | (df_continuo > upper_bound)).any(axis=1)
     df_clean = df[mask].copy()
 
-    print(f"⚠ Aviso: {df.shape[0] - df_clean.shape[0]} outliers removidos")
+    print(f"⚠ Aviso: {df.shape[0] - df_clean.shape[0]} outliers removidos "
+          f"(IQR aplicado em {len(cols_validas)} colunas contínuas)")
     return df_clean
 
 
