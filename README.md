@@ -106,22 +106,10 @@ No navegador, abra e execute cada notebook na seguinte ordem:
 ```
 diabetes-ml-prediction/
 │
-├── AGENTS.md                          # Instruções para o agente agy
 ├── README.md                          # Documentação principal
 ├── LICENSE                            # Licença MIT
 ├── .gitignore                         # Arquivos a ignorar no Git
 ├── requirements.txt                   # Dependências do projeto
-│
-├── docs/                              # Documentação técnica do projeto
-│   ├── 01_requisitos.md
-│   ├── 02_arquitetura.md
-│   ├── 03_estrutura_pastas.md
-│   ├── 04_convencoes.md
-│   ├── 05_dados.md
-│   ├── 06_modelos.md
-│   ├── 07_experimentos.md
-│   ├── 08_relatorio.md
-│   └── 09_fluxo_trabalho.md
 │
 ├── data/                              # Dataset (não versionado)
 │   └── README.md                      # Instruções de obtenção do dataset
@@ -154,6 +142,6 @@ diabetes-ml-prediction/
 
 ## Integrantes do Grupo
 
-- **Mateus Neri** — Desenvolvedor Principal / Reprodutor do Artigo
-- **Juliana Assis** — Assistente de Pré-processamento
-- **Fávio de Aguiar** — Coletor de Métricas e Resultados
+- **Mateus Neri** 
+- **Juliana Assis**
+- **Fávio de Aguiar**
