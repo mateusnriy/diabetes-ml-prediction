@@ -337,7 +337,7 @@ IS_COLAB = 'COLAB_GPU' in os.environ or 'COLAB_RELEASE_TAG' in os.environ
 
 if IS_COLAB:
     # No Colab: fazer clone do repositório
-    # !git clone https://github.com/SEU_USUARIO/diabetes-ml-prediction.git
+    # !git clone https://github.com/mateusnriy/diabetes-ml-prediction.git
     # %cd diabetes-ml-prediction
     ROOT = Path('/content/diabetes-ml-prediction')
 else:

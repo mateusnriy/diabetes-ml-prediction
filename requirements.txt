@@ -1,0 +1,24 @@
+# Manipulação de dados
+pandas==2.2.2
+numpy==1.26.4
+
+# Machine Learning
+scikit-learn==1.4.2
+imbalanced-learn==0.12.3
+
+# Deep Learning
+tensorflow==2.16.1
+
+# Visualização
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# IA Explicável
+shap==0.45.1
+
+# Notebooks
+jupyter==1.0.0
+ipykernel==6.29.4
+
+# Utilitários
+pathlib2==2.3.7
