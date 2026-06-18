@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Status: Concluído](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen.svg)]()
 
-## Resumo Executivo
+## Resumo
 
 Este projeto reproduz e valida experimentalmente os resultados do artigo **"A comparison of machine learning algorithms for diabetes prediction"** (Khanam & Foo, 2021), publicado na *ICT Express*. A pesquisa compara o desempenho de **7 classificadores clássicos de Machine Learning** e **3 arquiteturas de Redes Neurais Artificiais** na tarefa de rastreio precoce de diabetes mellitus tipo 2.
 
