@@ -9,11 +9,11 @@
 
 Antes de começar, certifique-se de ter:
 
-- [ ] Conta Google (Pro, Ultra ou gratuita)
-- [ ] Antigravity CLI instalado (`agy --version` funciona no terminal)
-- [ ] Git instalado e configurado
-- [ ] Python 3.10+ instalado
-- [ ] Arquivo `diabetes.csv` baixado do Kaggle
+- [X] Conta Google (Pro, Ultra ou gratuita)
+- [X] Antigravity CLI instalado (`agy --version` funciona no terminal)
+- [X] Git instalado e configurado
+- [X] Python 3.10+ instalado
+- [X] Arquivo `diabetes.csv` baixado do Kaggle
 
 ---
 
@@ -318,7 +318,7 @@ git commit -m "docs: adiciona relatório técnico e README final com resultados"
 git push origin main
 
 # Verificar repositório no GitHub
-echo "✓ Repositório disponível em: https://github.com/SEU_USUARIO/diabetes-ml-prediction"
+echo "✓ Repositório disponível em: https://github.com/mateusnriy/diabetes-ml-prediction"
 ```
 
 ### Passo 6.3 — Checklist final de entrega
